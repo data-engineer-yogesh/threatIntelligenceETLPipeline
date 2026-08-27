@@ -1,0 +1,16 @@
+services:
+
+  threat-intelligence-pipeline:
+
+    build:
+      context: .
+
+    container_name: threat-intelligence-pipeline
+
+    volumes:
+      - ./data:/app/data
+
+    environment:
+      PYTHONUNBUFFERED: "1"
+
+    restart: "no"
